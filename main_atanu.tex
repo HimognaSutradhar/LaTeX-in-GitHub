@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Atanu Adhikary}
+\fancyhead[C]{20}
+\fancyhead[R]{21}
+
+\begin{document}
+
+\section*{5. Creating LaTeX Repository on GitHub}
+
+In this guide, we will walk through the steps to create a LaTeX repository on GitHub. GitHub is a popular platform for version control and collaboration, allowing you to store your LaTeX projects and share them with others.
+
+\subsection*{Introduction}
+
+\subsection*{Pre-requisites}
+Before proceeding, make sure you have the following:
+\begin{itemize}
+    \item A GitHub account (\url{https://github.com/mratanu2004}).
+    \item Git installed on your machine.
+    \item Basic understanding of version control.
+\end{itemize}
+
+\subsection*{Step 1: Creating a Repository}
+To create a repository on GitHub:
+\begin{enumerate}
+    \item Log in to your GitHub account.
+    \item Click on the \textbf{New repository} button in the top right corner.
+    \item Give your repository a name, e.g., \texttt{my-latex-project}.
+    \item Optionally, add a description.
+    \item Choose whether you want the repository to be public or private.
+    \item Click \textbf{Create repository}.
+\end{enumerate}
+
+\subsection*{Step 2: Setting Up a LaTeX Project Locally}
+Next, set up your LaTeX project locally:
+\begin{enumerate}
+    \item Navigate to the folder where you want to store your project.
+    \item Initialize a git repository:
+    \begin{verbatim}
+    git init
+    \end{verbatim}
+    \item Create your LaTeX files, for example:
+    \begin{verbatim}
+    touch main.tex
+    \end{verbatim}
+\end{enumerate}
+
+\subsection*{Step 3: Connecting Local Repository to GitHub}
+Now, connect your local repository to GitHub:
+\begin{enumerate}
+    \item In your terminal, run:
+    \begin{verbatim}
+    git remote add origin https://github.com/your-username/my-latex-project.git
+    \end{verbatim}
+    \item Add and commit your changes:
+    \begin{verbatim}
+    git add .
+    git commit -m "Initial commit"
+    \end{verbatim}
+    \item Push your changes to GitHub:
+    \begin{verbatim}
+    git push -u origin master
+    \end{verbatim}
+\end{enumerate}
+
+\subsection*{Step 4: Managing Your LaTeX Project}
+Once the repository is created and set up, you can continue to work on your LaTeX project by adding, committing, and pushing changes. GitHub also allows for collaborative work, so you can invite others to contribute to your project.
+
+To add new files, such as additional LaTeX chapters or images, you can:
+\begin{verbatim}
+git add newfile.tex
+git commit -m "Added new chapter"
+git push
+\end{verbatim}
+
+\subsection*{Collaboration}
+To collaborate with others, simply add them as collaborators in your GitHub repository settings, or share the repository link for them to fork.
+
+\subsection*{Conclusion}
+In this document, we covered how to create a LaTeX repository on GitHub and manage it using basic git commands. By hosting your LaTeX projects on GitHub, you can leverage version control and collaboration features to enhance your workflow.
+
+\end{document}
