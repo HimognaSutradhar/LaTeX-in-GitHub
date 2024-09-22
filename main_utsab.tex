@@ -1,0 +1,195 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for including images
+\usepackage{xcolor}   % Required for colored text
+\usepackage{amsmath}  % Required for advanced math formatting
+\usepackage{enumitem} % For customizing lists
+
+\title{\centering \LARGE \textbf{4. Introduction to LaTeX} \\[0.5cm]}
+\author{\centering \Large \textbf{Lab Entry By} \\[0.5cm] \large Uthsab Datta}
+\date{} % Optional date, leave empty if you don't want a date
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+LaTeX{} is a sophisticated typesetting system developed by Leslie Lamport and built upon the TeX typesetting system created by Donald Knuth. It is widely recognized for its capability to handle complex formatting tasks with precision, making it the preferred choice for producing high-quality scientific, mathematical, and academic documents.
+
+LaTeX{} excels in the following areas:
+\begin{itemize}
+    \item \textbf{Mathematical Typesetting}: LaTeX{} is renowned for its exceptional ability to render complex mathematical equations and symbols. It provides a wide range of mathematical symbols and structures, such as fractions, integrals, summations, and matrices, all formatted with high typographical quality.
+    
+    \item \textbf{Bibliographies and Citations}: Managing bibliographies and citations is another area where LaTeX{} excels. Through the use of packages like bibtex or biber, users can automate the generation of bibliographies and manage references efficiently.
+    
+    \item \textbf{Document Structuring}: LaTeX{} allows users to structure their documents in a hierarchical manner, using sections, subsections, and subsubsections, ensuring that documents are well-organized and easy to navigate.
+    
+    \item \textbf{Customization and Flexibility}: Users have extensive control over document formatting and layout, allowing for the creation of highly customized and professional-looking documents.
+    
+    \item \textbf{Cross-Referencing and Indexing}: LaTeX{} provides robust features for cross-referencing sections, figures, tables, and equations, and supports automated indexing.
+\end{itemize}
+
+LaTeX{} is not limited to scientific papers; it is also used for creating a variety of other document types, including:
+\begin{itemize}
+    \item \textbf{Technical Reports}
+    \item \textbf{Theses and Dissertations}
+    \item \textbf{Books and Articles}
+    \item \textbf{Presentations}
+\end{itemize}
+
+Despite its powerful features, LaTeX{} can have a steep learning curve, especially for those new to typesetting or programming. However, mastering it pays off in high-quality, professional documents that meet rigorous standards.
+
+In summary, LaTeX{} is a versatile and powerful typesetting system that supports a wide range of document types and formatting requirements.
+
+\section{Basic Document Structure}
+A basic LaTeX{} document has a fundamental structure that consists of several key components. Understanding this structure is essential for creating and managing LaTeX{} documents effectively.
+
+\begin{verbatim}
+\documentclass{article}
+\end{verbatim}
+\textbf{Document Class:} The \texttt{\textbackslash documentclass\{article\}} command specifies the type of document. The article class is suitable for shorter documents like journal articles and essays.
+
+\begin{verbatim}
+\begin{document}
+\end{verbatim}
+\textbf{Document Environment:} The \texttt{\textbackslash begin\{document\}} and \texttt{\textbackslash end\{document\}} commands define the main content area of your document.
+
+\begin{verbatim}
+% Your content here
+\end{verbatim}
+\textbf{Content:} Within the document environment, you can include various elements such as sections, text, figures, tables, and mathematics.
+
+\textbf{Additional Packages:} LaTeX{} allows for the inclusion of additional packages that extend its functionality.
+
+In summary, the basic structure of a LaTeX{} document involves defining the document class, including content within the document environment, and optionally utilizing additional packages to enhance functionality.
+
+\section{Text Formatting}
+LaTeX{} provides a range of commands to format text. Here are some commonly used text formatting commands:
+
+\begin{itemize}
+    \item \textbf{Bold Text:}
+    \begin{verbatim}
+    \textbf{This is bold text}
+    \end{verbatim}
+    
+    \item \textit{Italic Text:}
+    \begin{verbatim}
+    \textit{This is italic text}
+    \end{verbatim}
+    
+    \item \textit{Underlined Text:}
+    \begin{verbatim}
+    \underline{This is underlined text}
+    \end{verbatim}
+    
+    \item \texttt{Typewriter Font:}
+    \begin{verbatim}
+    \texttt{This is monospaced text}
+    \end{verbatim}
+    
+    \item \textsf{Sans-Serif Font:}
+    \begin{verbatim}
+    \textsf{This is sans-serif text}
+    \end{verbatim}
+    
+    \item \texttt{Small Caps:}
+    \begin{verbatim}
+    \textsc{This is small caps text}
+    \end{verbatim}
+    
+    \item \texttt{Colored Text:}
+    \begin{verbatim}
+    \textcolor{red}{This is red text}
+    \end{verbatim}
+    
+    \item \texttt{Custom Font Sizes:}
+    \begin{verbatim}
+    {\small This text is smaller.}
+    {\large This text is larger.}
+    \end{verbatim}
+\end{itemize}
+
+By mastering these commands, you can effectively highlight important information in your documents.
+
+\section{Mathematical Equations}
+LaTeX{} excels at typesetting complex mathematical equations with precision. 
+
+\subsection{Displayed Equations}
+Displayed equations are centered on their own line. You can create displayed equations using the \texttt{equation} environment:
+
+\begin{equation}
+E = mc^2
+\end{equation}
+
+For multiple equations, use the \texttt{align} environment:
+
+\begin{align}
+a^2 + b^2 &= c^2 \\
+x &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{align}
+
+\subsection{Inline Equations}
+Inline equations are used within a line of text. For example:
+
+\begin{verbatim}
+The Pythagorean theorem states that $a^2 + b^2 = c^2$.
+\end{verbatim}
+
+This renders as: The Pythagorean theorem states that \(a^2 + b^2 = c^2\).
+
+\subsection{Mathematical Symbols and Operators}
+LaTeX{} provides a rich set of symbols and operators for mathematical notation. For example:
+\begin{itemize}
+    \item Greek letters: \(\alpha, \beta, \gamma\)
+    \item Operators: \(\sum, \int, \prod\)
+    \item Relations: \(\leq, \geq, \neq\)
+    \item Special symbols: \(\infty, \nabla, \partial\)
+\end{itemize}
+
+\subsection{Using Packages for Advanced Math}
+For advanced mathematical typesetting, include the \texttt{amsmath} package in your preamble:
+
+\begin{verbatim}
+\usepackage{amsmath}
+\end{verbatim}
+
+\section{Inserting Images}
+To insert images, use the \texttt{graphicx} package:
+
+\begin{verbatim}
+\usepackage{graphicx}
+\end{verbatim}
+
+To insert an image, use the \texttt{figure} environment:
+
+\begin{verbatim}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{example-image}
+    \caption{An example image.}
+    \label{fig:example}
+\end{figure}
+\end{verbatim}
+
+\section{Creating Lists}
+You can create both bulleted and numbered lists:
+
+\subsection{Bulleted List}
+Using the \texttt{itemize} environment:
+\begin{verbatim}
+\begin{itemize}
+    \item First item
+    \item Second item
+    \item Third item
+\end{itemize}
+\end{verbatim}
+
+\subsection{Numbered List}
+Using the \texttt{enumerate} environment:
+\begin{verbatim}
+\begin{enumerate}
+    \item First item
+    \item Second item
+    \item Third item
+\end{enumerate}
+\end{verbatim}
+
+\end{document}
